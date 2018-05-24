@@ -20,8 +20,9 @@ ch_id = bot.find_channel(targetchannel).first
 
 if ch_id != nil then
     dfresult = `df -h`
+    dcmessage = "```\n" + dfresult + "\n```"
     bot.send_message(ch_id, "今日のサーバ容量をお知らせするでブラウニー！")
-    bot.send_message(ch_id, dfresult)
+    bot.send_message(ch_id, dcmessage)
     bot.send_message(ch_id, "以上だブラウニー！")
 end
 
